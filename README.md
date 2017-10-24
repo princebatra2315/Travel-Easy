@@ -1,6 +1,6 @@
 # Travel-Easy
 
-Everybody loves to go on an adventurous trip to travel different places but sometimes it might occur that the airline in which you want to travel has no more tickets left.
+Everybody loves to go on an adventurous trips to travel different places but sometimes it might occur that the airline in which you want to travel has no more tickets left.
 But there are people who cancel their tickets or even sometimes there are tickets which are left vacant but people are not informed about it.
 
 Here, our website comes into play and it will inform the travelers regarding the vacant seats or even the seats which are canceled one day before departure.
