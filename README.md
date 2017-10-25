@@ -8,4 +8,4 @@ Our website is going to be a medium for travelers and travel airlines for ticket
 
 Both customer and service provider got their needs fulfilled.
       
-**This is a demo website on Ruby on Rails framework.**
+**This is a Demo Website on Ruby on Rails framework.**
