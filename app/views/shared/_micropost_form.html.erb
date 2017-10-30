@@ -1,0 +1,30 @@
+<%= form_for(@micropost)  do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="col-md-6 col-md-offset-3">
+  	<%= f.label :Origin %>
+       <%= f.select :origin, ['Delhi', 'Ahemdabad', 'Mumbai', 'Goa', 'Kolkata', 'Chennai'], class: 'form-control'%>
+
+      <%= f.label :Destination %>
+      <%= f.select :destination, ['Delhi', 'Ahemdabad', 'Mumbai', 'Goa', 'Kolkata', 'Chennai'], class: 'form-control'%>
+     
+      <%= f.label :Budget %>
+       <%= f.select :budget, ['1000', '1500', '2000', '2500', '3000', '3500', '4000', '4500', '5000', '5500'], class: 'form-control'%>
+
+       
+        <%= f.label :Starting_date %>
+<div>
+      <%= f.date_select :startdate,{order: [:day, :month, :year], prompt: { day: 'day', month: 'month', year: 'year' }, start_year: Date.today.year , end_year: Date.today.year+1 }, { :class => "col-md-4" } %>
+</div>
+              <%= f.label :End_date %>
+<div>
+      <%= f.date_select :enddate,{order: [:day, :month, :year], prompt: { day: 'day', month: 'month', year: 'year' }, start_year: Date.today.year , end_year: Date.today.year+1 }, { :class => "col-md-4" } %>
+</div>
+      <%= f.label :Comments  %>
+    <%= f.text_area :content, placeholder: "comments..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+  <span class="picture">
+    <% f.file_field :picture %>
+  </span>
+
+<% end %>
