@@ -1,0 +1,24 @@
+<h1>Create Tickets</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+   
+  <%= form_for(@ticket, url: ticket_url) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    
+      <%= f.label :Origin %>
+      <%= f.text_field :origin,class: 'form-control'%>
+
+     
+     
+      <%= f.label :Price %>
+      <%= f.text_field :price,class: 'form-control'%>
+
+     <%= f.label :Journey_date %>
+<div>
+      <%= f.date_select :journeydate,{order: [:day, :month, :year], prompt: { day: 'day', month: 'month', year: 'year' }, start_year: Date.today.year , end_year: Date.today.year+1 }, { :class => "col-md-4" } %>
+</div>
+      <%= f.submit "Create new ticket", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

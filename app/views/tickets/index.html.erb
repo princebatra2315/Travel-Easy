@@ -1,0 +1,16 @@
+<h1>All users</h1>
+
+<ul class="users">
+  <%= @tickets.each do |ticket| %>
+    <li>
+      <%= ticket.origin %>
+      <%= ticket.destination %>
+      <%= ticket.price %>
+      <%= ticket.date %>
+    | <%= link_to "delete", ticket, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+    </li>
+  <% end %>
+</ul>
+

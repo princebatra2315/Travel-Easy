@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+              <section class="stats">
+        <% render 'shared/stats' %>
+      </section>
+
+
+      <section class="micropost_form">
+        <% render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>
+
+ 
+ 
+<div class="row">
+    <aside class="col-md-6 col-md-offset-3">
+      <section class="user_info">
+        <% render 'shared/user_info' %>
+      </section>
+              <section class="stats">
+        <% render 'shared/stats' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+
+<!--Start-a-new-session-->
+    <title>TRAVEL EASY</title>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title></title><!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS & JS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet"><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<body>
+  <!--Start header section-->
+  <div class="wrapper">
+    <div class="header-background-image">
+      <div class="container">
+        <div class="col-md-2">
+          <div class="row">
+            <div class="header-logo">
+              <img src="/logo.png">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-10">
+            
+             <!--  <div class="row">
+                <div class="menu-background-color">
+                <div class="header-menu">
+                  <ul class="hover-menu">
+                    <li class="active-menu"><a href="#">home</a></li>
+                    <li>booking</li>
+                    <li>check in</li>
+                    <li>services</li>
+                    <li>information</li>
+                    <li>easy lines</li>
+                    <li>about</li>
+                      </ul>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--Close header section-->
+    <!--Start Connecting World Section-->
+    <div class="wrapper">
+      <div class="container">
+        <div class="connecting-world">
+          <h1>Connecting the world of travel</h1>
+          <p>We are the leading global provider of digital flight information and provide accurate, timely and actionable<br> information and applications across the travel sector to the world’s airlines, airports, government agencies,<br> aircraft manufacturers, consultancies and travel related companies.<br></p>
+            </div>
+           <div class="three-features-airlines">
+            <div class="col-md-4">
+            <div class="airlines-travel-tourism">
+                  <h1>airlines</h1>
+                  <i class="fa fa-plane" aria-hidden="true"></i>
+                  <p>The most comprehensive and accurate flight schedules and flight status information</p>
+                  
+                  </div>
+                </div>
+              <div class="col-md-4">
+              <div class="airlines-travel-tourism">
+                  <h1>travel-tech</h1>
+                  <i class="fa fa-wifi" aria-hidden="true"></i>
+                  <p>ThStepping up service levels with essential data to deliver personalised offerings  </p>
+                  
+                  </div>
+                </div>
+              <div class="col-md-4">
+              <div class="airlines-travel-tourism">
+                  <h1>tourism</h1>
+                  <i class="fa fa-camera-retro" aria-hidden="true"></i>
+                  <p>OAG provides air travel trends analysis and day-of-travel information to inform</p>
+                  
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Close Connecting World Section-->
+        <!--Start Customers Statement-->
+        <div class="wrapper">
+          <div class="container">
+            <div class="customers-about">
+          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+          <h1>What our customers say about us</h1>
+          <img src="/border.png">
+            </div>
+            <div class="customers-suggestion">
+              <p>The newly installed  <a href="#"> OAG Analyser</a> has greatly improved the performance of detailed capacity and schedule analysis. Prior to subscribing to OAG’s scheduling tools, this analysis had been done mostly manually by our team. The programme’s quick and easy-to-use functions have assisted us in our day-to-day tasks. OAG Analyser provides additional features such as <a href="#">historical data</a> and quick data export capability. It definitely meets the needs of the most demanding analyst who requires powerful data which is accurate, fast, reliable and user-friendly.</p>
+
+              <h2>The team at Public, International, Industry and Environment Affairs, Emirates Airline</h2>
+              
+
+
+
+            </div>
+
+
+          </div>
+          
+
+
+        </div>      
+
+<!--Close-a-new-session-->
+  </body>
+  <% end %>
+</html>

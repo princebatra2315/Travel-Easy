@@ -1,0 +1,62 @@
+<li id="<%= micropost.id %>">
+  <% link_to gravatar_for(micropost.user, size: 50), micropost.user %>
+  <span class="user"><% link_to micropost.user.name, micropost.user %></span>
+  <div class="data">
+
+  <span class="content">
+    <div class="">
+         
+         <div class="row setfirst ">
+             <div class="col-lg-4">
+              <%= micropost.origin %>
+             </div>
+             <div class="col-lg-4 ">
+              <%= micropost.destination %>
+             </div>
+           </div>
+           <div class="row setsecond">
+             <div class="col-lg-8">
+              <%= micropost.budget %>
+             </div></div>
+             <div class="row setthird" >
+             <div class="col-lg-4">
+              <%= micropost.startdate %>
+             </div>
+             <div class="col-lg-4">
+              <%= micropost.enddate %>
+             </div>
+           </div>
+
+  <!--   
+    <h4 style="color:red;">Origin</h4>
+      <%= micropost.origin %>
+   <br>
+     <h4 style="color:red;">Destination</h4>
+      <%= micropost.destination %>
+   <br>
+     <h4 style="color:red;">Budget</h4>
+      <%= micropost.budget %>
+   <br>
+     <h4 style="color:red;">Starting_date</h4>
+   
+      <%= micropost.startdate %>
+   <br>
+     <h4 style="color:red;">End_date</h4>
+      <%= micropost.enddate %>
+   <br>
+   <% if micropost.content? %> 
+   <h4 style="color:red;">Comments</h4>
+    <%= micropost.content  %>
+    <% end %>
+    <%= image_tag micropost.picture.url if micropost.picture? %>
+  </span>
+ 
+    </div> -->
+     <span class="timestamp setfourth">
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+    <% if  current_user?(micropost.user) %>
+      <%= link_to "delete", micropost, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %></span></div>
+  </span></div>
+</li>
